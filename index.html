@@ -7,38 +7,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <h1>SPLITTER</h1>
+  <section class="calc">
+    <main class="calc__wrapper">
+      <form class="calc__form-input">
+        <label class="calc__bill">Bill</label>
+        <input class="calc__input calc__input_active calc__input_behavior_subtotal" type="number">
+        <div class="calc__buttons">
+          <label class="calc__tip">Select Tip %</label>
+          <button class="calc__button calc__button_active">5%</button>
+          <button class="calc__button calc__button_active">10%</button>
+          <button class="calc__button calc__button_active">15%</button>
+          <button class="calc__button calc__button_active">25%</button>
+          <button class="calc__button calc__button_active">50%</button>
+          <input class="calc__input calc__input_active calc__input_behavior_custom" type="number" placeholder="Custom">
+        </div>
+        <label class="calc__people">Number of People</label>
+        <input class="calc__input calc__input_active calc__input_behavior_persons" type="number">
+      </form>
+      <form class="calc__form-output">
+        <label class="calc__tip">Tip Amount / person</label>
+        <label class="calc__tip-person"></label>
+        <label class="calc__total">Total / person</label>
+        <label class="calc__total-person"></label>
+        <button class="calc__button calc__button_active calc__button_size_m">Reset</button>
+      </form>
+    </main>
+  </section>
 </body>
 </html>
