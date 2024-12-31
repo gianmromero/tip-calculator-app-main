@@ -20,15 +20,186 @@ body {
     font-family: 'Space Mono', sans-serif;
     font-size: 1rem;
     background-color: var(--light-grayish-cyan);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin-top: 3.125em;
 }
 
 .logo {
     margin-bottom: 2.55375em;
+}
+
+.calc {
+    background-color: var(--white);
+    border-radius: 0.9375em 0.9375em 0 0;
+    padding: 1.5em;
+}
+
+.calc__wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "input"
+    "output";
+}
+
+.calc__form-input {
+    grid-area: input;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "subtotal"
+    "tip"
+    "people";
+}
+
+.calc__input {
+    width: 100%;
+    padding: 0.25em;
+    border-radius: 0.3125em;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--very-dark-cyan);
+}
+
+.calc__text {
+    font-weight: bold;
+    color: var(--dark-grayish-cyan);
+}
+
+.calc__form-group {
+    margin-bottom: 32px;
+}
+
+.calc__form-group_subtotal {
+    grid-area: subtotal;
+}
+.calc__input_value_subtotal {
+    background: var(--very-light-grayish-cyan) url("images/icon-dollar.svg") no-repeat;
+    background-position: 0.7em center;
+    text-align: right;
+}
+
+.calc__button {
+    display: block;
+    padding: 0.3em;
+    border-radius: 0.3125em;
+    border: none;
+    background-color: var(--very-dark-cyan);
+    font-family: 'Space Mono', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.calc__buttons {
+    grid-area: tip;
+    display: grid;
+    grid-template-columns: repeat(2, 146.63px);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "title title" 
+    "value_5 value_10"
+    "value_15 value_25"
+    "value_50 value_custom";
+    gap: 1em 1.035em;
+}
+
+
+.calc__button_value_5 {
+    grid-area: value_5;
+}
+.calc__button_value_10 {
+    grid-area: value_10;
+}
+.calc__button_value_15 {
+    grid-area: value_15;
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+.calc__button_value_25 {
+    grid-area: value_25;
+}
+.calc__button_value_50 {
+    grid-area: value_50;
+    
+}
+.calc__input_value_custom {
+    grid-area: value_custom;
+    text-align: right;
+}
+.calc__input_value_custom::placeholder {
+    color: var(--dark-grayish-cyan);
+    font-family: 'Space Mono', sans-serif;
+    margin-right: 0.595625em;
+}
+
+
+.calc__form-group_people {
+    grid-area: people;
+}
+.calc__input_value_number-people {
+    background: var(--very-light-grayish-cyan) url("images/icon-person.svg") no-repeat;
+    background-position: 0.7em center;
+    text-align: right;
+}
+
+.calc__form-output {
+    grid-area: output;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "tip-amount tip-amount-output"
+    "total total-output"
+    "button-reset button-reset";
+    padding: 2.4375em 1.5em 1.5em 1.5em;
+    border-radius: 0.9375em;
+    background-color: var(--very-dark-cyan);
+    row-gap: 1.4375em;
+}
+
+.calc__text_tip-amount {
+    grid-area: tip-amount;
+}
+.calc__text_total {
+    grid-area: total;
+}
+.calc__text_color {
+    color: var(--white);
+}
+.calc__text_subtitle {
+    font-size: 0.8125rem;
+    color: var(--grayish-cyan);
+}
+.calc__output_tip {
+    grid-area: tip-amount-output;
+}
+.calc__output_total {
+    grid-area: total-output;
+}
+.calc__output {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -0.041875rem;
+    color: var(--strong-cyan);
+    justify-self: end;
+}
+
+.calc__button_size_m {
+    grid-area: button-reset;
+    font-size: 1.25rem;
+    padding: 0.5em 0.75em 0.5em 0.75em;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    
 }
 

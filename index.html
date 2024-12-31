@@ -17,26 +17,33 @@
   <section class="calc">
     <main class="calc__wrapper">
       <form class="calc__form-input">
-        <label class="calc__bill">Bill</label>
-        <input class="calc__input calc__input_active calc__input_behavior_subtotal" type="number">
-        <div class="calc__buttons">
-          <label class="calc__tip">Select Tip %</label>
-          <button class="calc__button calc__button_active">5%</button>
-          <button class="calc__button calc__button_active">10%</button>
-          <button class="calc__button calc__button_active">15%</button>
-          <button class="calc__button calc__button_active">25%</button>
-          <button class="calc__button calc__button_active">50%</button>
-          <input class="calc__input calc__input_active calc__input_behavior_custom" type="number" placeholder="Custom">
+        <div class="calc__form-group calc__form-group_subtotal">
+          <label class="calc__text">Bill</label>
+          <input class="calc__input calc__input_active calc__input_value_subtotal" type="number">
         </div>
-        <label class="calc__people">Number of People</label>
-        <input class="calc__input calc__input_active calc__input_behavior_persons" type="number">
+        <div class="calc__form-group calc__buttons">
+          <label class="calc__text">Select Tip %</label>
+          <button class="calc__button calc__button_active calc__button_value_5">5%</button>
+          <button class="calc__button calc__button_active calc__button_value_10">10%</button>
+          <button class="calc__button calc__button_active calc__button_value_15">15%</button>
+          <button class="calc__button calc__button_active calc__button_value_25">25%</button>
+          <button class="calc__button calc__button_active calc__button_value_50">50%</button>
+          <input class="calc__input calc__input_active calc__input_value_custom" type="number" placeholder="Custom">
+        </div>
+        <div class="calc__form-group calc__form-group_people">
+          <label class="calc__text">Number of People</label>
+          <input class="calc__input calc__input_active calc__input_value_number-people" type="number">
+        </div>
       </form>
       <form class="calc__form-output">
-        <label class="calc__tip">Tip Amount / person</label>
-        <label class="calc__tip-person"></label>
-        <label class="calc__total">Total / person</label>
-        <label class="calc__total-person"></label>
-        <button class="calc__button calc__button_active calc__button_size_m">Reset</button>
+        
+          <label class="calc__text calc__text_color calc__text_tip-amount">Tip Amount<p class="calc__text_subtitle"> / person</p></label>
+          <output class="calc__output calc__output_tip">$4.27</output>
+        
+          <label class="calc__text calc__text_color calc__text_total">Total <p class="calc__text_subtitle"> / person</p></label>
+          <output class="calc__output calc__output_total">$32.79</output>
+
+          <button class="calc__button calc__button_active calc__button_size_m">RESET</button>
       </form>
     </main>
   </section>
