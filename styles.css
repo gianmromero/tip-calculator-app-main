@@ -255,8 +255,6 @@ body {
         align-self: end;
     }
 
-    
-
 
     /*States styles*/
     .calc__input_active[type="number"]:focus {
@@ -278,4 +276,13 @@ body {
         margin-left: 124px;
     }
 
+    .calc__input.zero-value {
+        font-family: 'Space Mono', sans-serif;
+        color: var(--grayish-cyan);
+    }
+
+    .calc__button_size_m:disabled {
+        background-color: #0D686D;
+        cursor: not-allowed;
+    }
 }

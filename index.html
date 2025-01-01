@@ -21,7 +21,7 @@
       <form class="calc__form-input">
         <div class="calc__form-group calc__form-group_subtotal">
           <label class="calc__text">Bill</label>
-          <input class="calc__input calc__input_active calc__input_value_subtotal" type="number">
+          <input class="calc__input calc__input_active calc__input_value_subtotal" type="number" value="0">
         </div>
         <div class="calc__form-group calc__buttons">
           <label class="calc__text">Select Tip %</label>
@@ -34,18 +34,18 @@
         </div>
         <div class="calc__form-group calc__form-group_people">
           <label class="calc__text">Number of People</label> 
-          <input class="calc__input calc__input_active calc__input_value_number-people" type="number">
+          <input class="calc__input calc__input_active calc__input_value_number-people" type="number" value="0">
         </div>
       </form>
       <form class="calc__form-output">
         
           <label class="calc__text calc__text_color calc__text_tip-amount">Tip Amount<p class="calc__text_subtitle"> / person</p></label>
-          <output class="calc__output calc__output_tip">$4.27</output>
+          <output class="calc__output calc__output_tip">$0.00</output>
         
           <label class="calc__text calc__text_color calc__text_total">Total <p class="calc__text_subtitle"> / person</p></label>
-          <output class="calc__output calc__output_total">$32.79</output>
+          <output class="calc__output calc__output_total">$0.00</output>
 
-          <button class="calc__button calc__button_active calc__button_size_m">RESET</button>
+          <button class="calc__button calc__button_active calc__button_size_m" id="resetButton">RESET</button>
       </form>
     </main>
   </section>
