@@ -103,7 +103,7 @@ body {
 .calc__buttons {
     grid-area: tip;
     display: grid;
-    grid-template-columns: repeat(2, 146.63px);
+    grid-template-columns: repeat(auto-fit, minmax(146.63px, 1fr));
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
     "title title" 
@@ -112,7 +112,6 @@ body {
     "value_50 value_custom";
     gap: 1em 1.035em;
 }
-
 
 .calc__button_value_5 {
     grid-area: value_5;
@@ -200,6 +199,5 @@ body {
     padding: 0.5em 0.75em 0.5em 0.75em;
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
-    
 }
 
