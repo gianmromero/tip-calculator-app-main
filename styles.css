@@ -255,6 +255,9 @@ body {
         align-self: end;
     }
 
+    
+
+
     /*States styles*/
     .calc__input_active[type="number"]:focus {
     
@@ -264,4 +267,15 @@ body {
     .calc__button_active:active {
         background-color: #9FE8DF;
     }
+    .error {
+        border-color: #E17052;
+        outline: 2px solid #E17052;
+    }
+
+    .error-message {
+        color: #E17052;
+        font-size: 1rem;
+        margin-left: 124px;
+    }
+
 }
