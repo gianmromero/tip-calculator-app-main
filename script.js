@@ -4,12 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const label = peopleInput.closest('.calc__form-group').querySelector('.calc__text');
     const inputs = document.querySelectorAll('.calc__input_value_subtotal, .calc__input_value_number-people');
     const outputs = document.querySelectorAll('.calc__output_tip, .calc__output_total');
-    
     const resetButton = document.getElementById('resetButton');
-    
     const billInput = document.getElementById('billInput');
     const customTipInput = document.getElementById('customTipInput');
-    
     const tipAmountOutput = document.getElementById('tipAmountOutput');
     const totalAmountOutput = document.getElementById('totalAmountOutput');
     const tipButtons = document.querySelectorAll('.calc__button_value_5, .calc__button_value_10, .calc__button_value_15, .calc__button_value_25, .calc__button_value_50');
@@ -29,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateTip();
     });
 
+    //Take valus from the inputs and calculate the tip
     billInput.addEventListener('input', calculateTip);
     peopleInput.addEventListener('input', calculateTip);
 
@@ -59,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
         checkValues();
     });
 
-    function checkValues() {
+
+    function checkValues() { 
         const allInputsZero = Array.from(inputs).every(input => input.value === '0');
         const allOutputsZero = Array.from(outputs).every(output => output.textContent === '$0.00');
 
@@ -86,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    
     tipButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             event.preventDefault();
@@ -142,6 +142,5 @@ document.addEventListener('DOMContentLoaded', function() {
             errorElement.remove();
         }
     }
-
     checkValues();
 });
